@@ -2,14 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutterdicoding/Detailspage/formtugas.dart';
 import 'package:flutterdicoding/theme.dart';
 
-class DetailKelas extends StatefulWidget {
+class DetailKelas extends StatelessWidget {
   const DetailKelas({Key? key}) : super(key: key);
 
-  @override
-  State<DetailKelas> createState() => _DetailKelasState();
-}
-
-class _DetailKelasState extends State<DetailKelas> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

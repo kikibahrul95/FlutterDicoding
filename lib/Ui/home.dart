@@ -5,13 +5,8 @@ import 'package:flutterdicoding/widget/kelas.dart';
 
 import 'package:flutterdicoding/widget/photo.dart';
 
-class HomePage extends StatefulWidget {
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  // const ({ Key? key }) : super(key: key);
+class HomePage extends StatelessWidget {
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(

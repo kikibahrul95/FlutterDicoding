@@ -3,12 +3,7 @@ import 'package:flutterdicoding/Tabbar.dart';
 import 'package:flutterdicoding/theme.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
-class Login extends StatefulWidget {
-  @override
-  _LoginState createState() => _LoginState();
-}
-
-class _LoginState extends State<Login> {
+class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

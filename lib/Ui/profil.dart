@@ -1,14 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterdicoding/theme.dart';
 
-class ProfilePage extends StatefulWidget {
-  @override
-  _ProfilePageState createState() => _ProfilePageState();
-}
-
-class _ProfilePageState extends State<ProfilePage> {
-  int selectedIndex = 0;
-
+class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
