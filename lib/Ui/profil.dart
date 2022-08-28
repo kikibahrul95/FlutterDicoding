@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutterdicoding/Ui/Splashscreen.dart';
+import 'package:flutterdicoding/Ui/Splash_screen.dart';
+
 import 'package:flutterdicoding/service/Authemail.dart';
 import 'package:flutterdicoding/theme.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';

@@ -71,6 +71,14 @@ class _SignupFormState extends State<SignupForm> {
   bool agree = false;
 
   final pass = new TextEditingController();
+  @override
+  void dispose() {
+    try {
+      pass.dispose();
+    } catch (e) {}
+
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
