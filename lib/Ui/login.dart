@@ -1,9 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutterdicoding/Tabbar.dart';
-import 'package:flutterdicoding/theme.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+import 'package:flutterdicoding/Ui/loginemail.dart';
+import 'package:flutterdicoding/service/auth.dart';
 
-class Login extends StatelessWidget {
+import '../service/auth.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+class Login extends StatefulWidget {
+  @override
+  State<Login> createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
+  String? email;
+  String? password;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,87 +22,56 @@ class Login extends StatelessWidget {
         children: [
           Column(
             children: [
-              Container(
-                child: Image(
-                  height: 150,
-                  width: 150,
-                  image: AssetImage("asset/logo.png"),
-                ),
-                margin: EdgeInsets.all(25.0),
-                padding: EdgeInsets.all(80.0),
-              ),
-              Container(
-                alignment: Alignment.centerLeft,
-                height: 50,
-                width: 300,
-                child: TextField(
-                  obscureText: false,
-                  decoration: InputDecoration(
-                      icon: Icon(Icons.email),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      labelText: "NoBp",
-                      hintText: "Masukan Nobp"),
+              Padding(
+                padding: EdgeInsets.only(top: 50),
+                child: Container(
+                  child: Image.asset(
+                    "asset/logo.png",
+                    width: 150,
+                  ),
                 ),
               ),
               SizedBox(
-                height: 16,
+                height: 50,
               ),
               Container(
-                alignment: Alignment.center,
-                height: 50,
                 width: 300,
-                child: TextField(
-                  obscureText: true,
-                  decoration: InputDecoration(
-                      icon: Icon(Icons.vpn_key),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      labelText: "Password",
-                      hintText: "Masukan Password"),
-                ),
-              ),
-              SizedBox(
-                height: 16,
-              ),
-              Row(
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(left: 70, bottom: 10),
-                    child: Text(
-                      "Lupa Password",
-                      style: hitamstyle.copyWith(fontSize: 15),
-                    ),
-                  )
-                ],
-              ),
-              Container(
-                height: 50,
-                width: 200,
-                child: RaisedButton(
-                  onPressed: () {
-                    Fluttertoast.showToast(
-                        msg: "Login Berhasil",
-                        toastLength: Toast.LENGTH_SHORT,
-                        gravity: ToastGravity.TOP,
-                        timeInSecForIosWeb: 1,
-                        backgroundColor: Colors.green,
-                        textColor: Colors.white,
-                        fontSize: 16.0);
+                child: ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)),
+                      primary: Colors.blue,
+                      onPrimary: Colors.white,
+                      minimumSize: Size(double.infinity, 50)),
+                  icon: FaIcon(FontAwesomeIcons.google),
+                  label: Text("Masuk dengan akun google"),
+                  onPressed: () async {
+                    await Authp.instance.signIn();
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => Tabbar()));
                   },
-                  color: biru,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15)),
-                  child: Text(
-                    "Login",
-                    style: whitestyle.copyWith(fontSize: 15),
-                  ),
                 ),
-              )
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Container(
+                width: 300,
+                child: ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)),
+                      primary: Colors.blue,
+                      onPrimary: Colors.white,
+                      minimumSize: Size(double.infinity, 50)),
+                  icon: FaIcon(FontAwesomeIcons.squareEnvelope),
+                  label: Text("Masuk dengan Email & Password"),
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Loginemail()));
+                  },
+                ),
+              ),
             ],
           ),
         ],

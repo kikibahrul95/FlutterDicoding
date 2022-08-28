@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "17534904795",
+    "project_id": "flutterdicoding-c7067",
+    "storage_bucket": "flutterdicoding-c7067.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:17534904795:android:5672861726decf22c35ffe",
+        "android_client_info": {
+          "package_name": "com.example.flutterdicoding"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "17534904795-0gquo4hb4j46l1l1a2hnko142h946vto.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlKFLDq7-TXewSz4ZFmZ34Or89MhOqcpc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "17534904795-0gquo4hb4j46l1l1a2hnko142h946vto.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

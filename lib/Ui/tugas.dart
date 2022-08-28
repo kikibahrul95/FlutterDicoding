@@ -4,14 +4,9 @@ import 'package:flutterdicoding/model/datatugas.dart';
 
 import '../theme.dart';
 
-class Tugas extends StatefulWidget {
+class Tugas extends StatelessWidget {
   const Tugas({Key? key}) : super(key: key);
 
-  @override
-  State<Tugas> createState() => _TugasState();
-}
-
-class _TugasState extends State<Tugas> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

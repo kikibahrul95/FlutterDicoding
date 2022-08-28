@@ -27,14 +27,15 @@ class SplashScreen extends StatelessWidget {
               child: Container(
                 height: 52,
                 width: 325,
-                child: RaisedButton(
+                child: ElevatedButton(
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => Login()));
                   },
-                  color: biru,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(17)),
+                  style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(17)),
+                      textStyle: TextStyle(fontSize: 15)),
                   child: Center(
                     child: Text(
                       'Get Started',

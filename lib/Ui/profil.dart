@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutterdicoding/Ui/Splashscreen.dart';
+import 'package:flutterdicoding/service/Authemail.dart';
 import 'package:flutterdicoding/theme.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ProfilePage extends StatelessWidget {
   @override
@@ -169,17 +172,23 @@ class ProfilePage extends StatelessWidget {
             Container(
               height: 50,
               width: 300,
-              child: RaisedButton(
-                onPressed: () {},
-                color: biru,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15)),
-                child: Text(
-                  "ResetPassword",
-                  style: whitestyle.copyWith(fontSize: 15),
-                ),
+              child: ElevatedButton.icon(
+                style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15)),
+                    primary: Colors.blue,
+                    onPrimary: Colors.white,
+                    minimumSize: Size(double.infinity, 50)),
+                icon: FaIcon(FontAwesomeIcons.doorOpen),
+                label: Text("Logout"),
+                onPressed: () {
+                  Authemail().signOut().then((_) => Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (contex) => SplashScreen()),
+                      ));
+                },
               ),
-            )
+            ),
           ],
         ),
       ],

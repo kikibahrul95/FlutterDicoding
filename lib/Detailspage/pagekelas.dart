@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterdicoding/Detailspage/formtugas.dart';
+import 'package:flutterdicoding/Ui/home.dart';
 import 'package:flutterdicoding/theme.dart';
 
 class DetailKelas extends StatelessWidget {
@@ -12,15 +13,16 @@ class DetailKelas extends StatelessWidget {
           bottom: false,
           child: Stack(
             children: [
-              // Image.asset("asset/conference.png",
-              //     width: MediaQuery.of(context).size.width,
-              //     height: 350,
-              //     fit: BoxFit.cover),
+              Image.asset("asset/Galgoritma.png.png",
+                  width: MediaQuery.of(context).size.width,
+                  height: 350,
+                  fit: BoxFit.cover),
               Padding(
                 padding: EdgeInsets.only(left: edge, top: 20),
                 child: InkWell(
                   onTap: () {
-                    Navigator.pop(context);
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => HomePage()));
                   },
                   child: Container(
                     height: 40,
@@ -43,14 +45,14 @@ class DetailKelas extends StatelessWidget {
               ListView(
                 children: [
                   SizedBox(
-                    height: 50,
+                    height: 350,
                   ),
                   Container(
-                    // width: MediaQuery.of(context).size.width,
-                    // decoration: BoxDecoration(
-                    //     borderRadius:
-                    //         BorderRadius.vertical(top: Radius.circular(20)),
-                    //     color: putih),
+                    width: MediaQuery.of(context).size.width,
+                    decoration: BoxDecoration(
+                        borderRadius:
+                            BorderRadius.vertical(top: Radius.circular(20)),
+                        color: putih),
                     child: Column(
                       children: [
                         Text(
@@ -60,152 +62,184 @@ class DetailKelas extends StatelessWidget {
                         SizedBox(
                           height: 20,
                         ),
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(20),
-                          child: InkWell(
-                            onTap: () {
+                        Padding(
+                          padding: const EdgeInsets.only(left: 20, right: 20),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(20),
+                                child: InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => Formtugas()));
+                                  },
+                                  child: InkWell(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  Formtugas()));
+                                    },
+                                    child: Container(
+                                      height: 80,
+                                      width: 80,
+                                      // color: putih,
+                                      decoration: BoxDecoration(
+                                          border: Border.all(
+                                            width: 4,
+                                            color: Colors.black,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(30)),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Icon(
+                                            Icons.task_alt,
+                                            color: biru,
+                                            size: 50,
+                                          ),
+                                          SizedBox(
+                                            width: 10,
+                                          ),
+                                          // Text(
+                                          //   "Absensi",
+                                          //   style:
+                                          //       whitestyle.copyWith(fontSize: 30),
+                                          // )
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(20),
+                                child: Container(
+                                  height: 80,
+                                  width: 80,
+                                  // color: Colors.green,
+                                  decoration: BoxDecoration(
+                                    border: Border.all(
+                                      width: 4,
+                                      color: Colors.black,
+                                    ),
+                                    borderRadius: BorderRadius.circular(30),
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Icon(
+                                        Icons.task_sharp,
+                                        color: biru,
+                                        size: 50,
+                                      ),
+                                      SizedBox(
+                                        width: 10,
+                                      ),
+                                      // Text(
+                                      //   "Materi",
+                                      //   style: whitestyle.copyWith(fontSize: 30),
+                                      // )
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(20),
+                                child: Container(
+                                  height: 80,
+                                  width: 80,
+                                  // color: Colors.green,
+                                  decoration: BoxDecoration(
+                                      border: Border.all(
+                                        width: 4,
+                                        color: Colors.black,
+                                      ),
+                                      borderRadius: BorderRadius.circular(30)),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Icon(
+                                        Icons.task_sharp,
+                                        color: biru,
+                                        size: 50,
+                                      ),
+                                      SizedBox(
+                                        width: 10,
+                                      ),
+                                      // Text(
+                                      //   "Materi",
+                                      //   style: whitestyle.copyWith(fontSize: 30),
+                                      // )
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: edge, right: edge),
+                          child: Container(
+                            height: 30,
+                            width: 380,
+                            // color: putih,
+
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  "Absensi",
+                                  style: blackstyle.copyWith(fontSize: 20),
+                                ),
+                                Text(
+                                  "Materi",
+                                  style: blackstyle.copyWith(fontSize: 20),
+                                ),
+                                Text(
+                                  "Tugas ",
+                                  style: blackstyle.copyWith(fontSize: 20),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 15,
+                        ),
+                        Container(
+                          height: 50,
+                          width: 300,
+                          child: ElevatedButton(
+                            onPressed: () {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) => Formtugas()));
                             },
-                            child: InkWell(
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => Formtugas()));
-                              },
-                              child: Container(
-                                height: 80,
-                                width: 280,
-                                // color: putih,
-                                decoration: BoxDecoration(
-                                    gradient: LinearGradient(colors: [
-                                      Color(0xff2980B9),
-                                      Color(0xff5E5E5E),
-                                      Color(0xff4100E0),
-                                    ]),
-                                    border: Border.all(
-                                      width: 5,
-                                      color: Colors.black,
-                                    ),
-                                    borderRadius: BorderRadius.circular(30)),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Icon(
-                                      Icons.task_alt,
-                                      color: putih,
-                                      size: 50,
-                                    ),
-                                    SizedBox(
-                                      width: 10,
-                                    ),
-                                    Text(
-                                      "Absensi",
-                                      style: whitestyle.copyWith(fontSize: 30),
-                                    )
-                                  ],
-                                ),
-                              ),
+                            style: ElevatedButton.styleFrom(
+                                textStyle: TextStyle(
+                                    fontSize: 20, fontWeight: FontWeight.bold),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(15))),
+                            child: Text(
+                              "Lanjut Belajar",
+                              style: whitestyle.copyWith(fontSize: 15),
                             ),
                           ),
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        InkWell(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Formtugas()));
-                          },
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(20),
-                            child: Container(
-                              height: 80,
-                              width: 280,
-                              // color: Colors.green,
-                              decoration: BoxDecoration(
-                                  gradient: LinearGradient(colors: [
-                                    Color(0xff2980B9),
-                                    Color(0xff5E5E5E),
-                                    Color(0xff4100E0),
-                                  ]),
-                                  border: Border.all(
-                                    width: 5,
-                                    color: Colors.black,
-                                  ),
-                                  borderRadius: BorderRadius.circular(30)),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    Icons.task_sharp,
-                                    color: Colors.white,
-                                    size: 50,
-                                  ),
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  Text(
-                                    "Materi",
-                                    style: whitestyle.copyWith(fontSize: 30),
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        InkWell(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Formtugas()));
-                          },
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(20),
-                            child: Container(
-                              height: 80,
-                              width: 280,
-                              // color: Colors.green,
-                              decoration: BoxDecoration(
-                                  gradient: LinearGradient(colors: [
-                                    Color(0xff2980B9),
-                                    Color(0xff5E5E5E),
-                                    Color(0xff4100E0),
-                                  ]),
-                                  border: Border.all(
-                                    width: 5,
-                                    color: Colors.black,
-                                  ),
-                                  borderRadius: BorderRadius.circular(30)),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    Icons.task_sharp,
-                                    color: Colors.white,
-                                    size: 50,
-                                  ),
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  Text(
-                                    "Tugas",
-                                    style: whitestyle.copyWith(fontSize: 30),
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
+                        )
                       ],
                     ),
                   )
