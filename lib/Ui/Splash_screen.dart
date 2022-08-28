@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutterdicoding/Ui/login.dart';
+import 'package:flutterdicoding/theme.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -11,7 +12,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    Timer(Duration(seconds: 5), () {
+    Timer(Duration(seconds: 10), () {
       Navigator.push(context, MaterialPageRoute(builder: (context) => Login()));
     });
 
@@ -38,28 +39,20 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
             ),
             SizedBox(
-              height: 80,
+              height: 30,
             ),
             Center(
               child: Container(
                 height: 52,
                 width: 325,
-                // child: ElevatedButton(
-                //   onPressed: () {
-                //     Navigator.push(context,
-                //         MaterialPageRoute(builder: (context) => Login()));
-                //   },
-                //   style: ElevatedButton.styleFrom(
-                //       shape: RoundedRectangleBorder(
-                //           borderRadius: BorderRadius.circular(17)),
-                //       textStyle: TextStyle(fontSize: 15)),
-                //   child: Center(
-                //     child: Text(
-                //       'Get Started',
-                //       style: whitestyle.copyWith(fontSize: 18),
-                //     ),
-                //   ),
-                // ),
+                child: Center(
+                    child: Text(
+                  "Stmik Indonesia Padang",
+                  style: TextStyle(
+                      color: Colors.blue,
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold),
+                )),
               ),
             )
           ],
