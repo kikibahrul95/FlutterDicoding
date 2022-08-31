@@ -175,10 +175,10 @@ class ProfilePage extends StatelessWidget {
               width: 300,
               child: ElevatedButton.icon(
                 style: ElevatedButton.styleFrom(
+                    foregroundColor: Colors.white,
+                    backgroundColor: Colors.blue,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15)),
-                    primary: Colors.blue,
-                    onPrimary: Colors.white,
                     minimumSize: Size(double.infinity, 50)),
                 icon: FaIcon(FontAwesomeIcons.doorOpen),
                 label: Text("Logout"),

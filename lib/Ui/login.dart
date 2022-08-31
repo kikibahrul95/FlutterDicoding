@@ -3,7 +3,6 @@ import 'package:flutterdicoding/Tabbar.dart';
 import 'package:flutterdicoding/Ui/loginemail.dart';
 import 'package:flutterdicoding/service/auth.dart';
 
-import '../service/auth.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Login extends StatefulWidget {
@@ -13,7 +12,9 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
   String? email;
+
   String? password;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,10 +39,10 @@ class _LoginState extends State<Login> {
                 width: 300,
                 child: ElevatedButton.icon(
                   style: ElevatedButton.styleFrom(
+                      foregroundColor: Colors.white,
+                      backgroundColor: Colors.blue,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15)),
-                      primary: Colors.blue,
-                      onPrimary: Colors.white,
                       minimumSize: Size(double.infinity, 50)),
                   icon: FaIcon(FontAwesomeIcons.google),
                   label: Text("Masuk dengan akun google"),
@@ -59,10 +60,10 @@ class _LoginState extends State<Login> {
                 width: 300,
                 child: ElevatedButton.icon(
                   style: ElevatedButton.styleFrom(
+                      foregroundColor: Colors.white,
+                      backgroundColor: Colors.blue,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15)),
-                      primary: Colors.blue,
-                      onPrimary: Colors.white,
                       minimumSize: Size(double.infinity, 50)),
                   icon: FaIcon(FontAwesomeIcons.squareEnvelope),
                   label: Text("Masuk dengan Email & Password"),

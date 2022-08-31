@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutterdicoding/Ui/login.dart';
-import 'package:flutterdicoding/theme.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -12,11 +11,11 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    Timer(Duration(seconds: 10), () {
-      Navigator.push(context, MaterialPageRoute(builder: (context) => Login()));
-    });
-
     super.initState();
+    Timer(Duration(seconds: 10), () {
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (context) => Login()));
+    });
   }
 
   @override
