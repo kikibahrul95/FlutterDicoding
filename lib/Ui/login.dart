@@ -5,16 +5,7 @@ import 'package:flutterdicoding/service/auth.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class Login extends StatefulWidget {
-  @override
-  State<Login> createState() => _LoginState();
-}
-
-class _LoginState extends State<Login> {
-  String? email;
-
-  String? password;
-
+class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

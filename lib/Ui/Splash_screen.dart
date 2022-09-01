@@ -3,23 +3,16 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutterdicoding/Ui/login.dart';
 
-class SplashScreen extends StatefulWidget {
+class SplashScreen extends StatelessWidget {
   @override
-  State<SplashScreen> createState() => _SplashScreenState();
-}
-
-class _SplashScreenState extends State<SplashScreen> {
-  @override
-  void initState() {
-    super.initState();
-    Timer(Duration(seconds: 10), () {
+  Widget build(BuildContext context) {
+    // void initState() {
+    //   super.initState();
+    Timer(Duration(seconds: 5), () {
       Navigator.pushReplacement(
           context, MaterialPageRoute(builder: (context) => Login()));
     });
-  }
 
-  @override
-  Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
           child: Center(
